@@ -12,5 +12,9 @@ public class Team {
 	private String name;
 	private Integer stadiumId;
 	private Timestamp createdAt;
+	
+	//엔티티가아닌 필드
+	private Integer no;
+	private String stadiumName;
 
 }

@@ -7,5 +7,5 @@ public interface PlayerDao {
 	public Player findById(Integer id);
 	public void insert(Player player);
 	public void update(Integer id , Player player);
-	public void deleteById();
+	public void deleteById(Integer id);
 }

@@ -21,10 +21,10 @@
 			</button>
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="">야구장등록페이지</a></li>
+					<li class="nav-item"><a class="nav-link" href="/stadiumForm">야구장등록페이지</a></li>
 					<li class="nav-item"><a class="nav-link" href="">팀등록페이지</a></li>
 					<li class="nav-item"><a class="nav-link" href="">선수등록페이지</a></li>
-					<li class="nav-item"><a class="nav-link" href="">야구장목록보기</a></li>
+					<li class="nav-item"><a class="nav-link" href="/stadium">야구장목록보기</a></li>
 					<li class="nav-item"><a class="nav-link" href="">팀목록보기</a></li>
 					<li class="nav-item"><a class="nav-link" href="">선수목록보기</a></li>
 					<li class="nav-item"><a class="nav-link" href="">포지션별 야구선수페이지</a></li>

@@ -5,7 +5,8 @@
 <mapper namespace="site.metacoding.red.domain.team.TeamDao">
 
 	<insert id="insert">
-		INSERT INTO team(NAME, stadium_id, created_at) VALUES(#{name}, #{stadiumId}, NOW())
+		INSERT INTO team(NAME, stadium_id, created_at) VALUES(#{name}, #{stadiumId},
+		NOW())
 	</insert>
 
 	<select id="findAll" resultType="site.metacoding.red.domain.team.Team">
@@ -27,6 +28,7 @@
 	</insert>
 
 	<insert id="deleteById">
+		DELETE FROM team WHERE id =#{id}
 	</insert>
 
 

@@ -16,6 +16,10 @@ public class TeamSerivce {
 
 	private final TeamDao teamDao;
 
+	public void 팀삭제(Integer id) {
+		teamDao.deleteById(id);
+	}
+	
 	public List<Team> 목록보기() {
 		return teamDao.findAll();
 	}

@@ -28,7 +28,7 @@ public class PlayerController {
 	@DeleteMapping("/player/{id}")
 	public @ResponseBody CMResponse<?> delete(@PathVariable Integer id) {
 		playerSerivce.선수삭제(id);
-		return new CMResponse<>(1,"경기장삭제", null);
+		return new CMResponse<>(1,"선수삭제", null);
 	}
 
 	@GetMapping("/player")

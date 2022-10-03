@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,6 +26,12 @@ public class TeamController {
 	private final TeamSerivce teamSerivce;
 	private final StadiumService stadiumService;
 
+	@DeleteMapping("/team/{id}")
+	public @ResponseBody CMResponse<?> delete(@PathVariable Integer id) {
+		teamSerivce.팀삭제(id);
+		return new CMResponse<>(1,"팀삭제", null);
+	}
+	
 		@GetMapping("/team")
 		public String list(Model model) {
 			List<Team> teamList = teamSerivce.목록보기();

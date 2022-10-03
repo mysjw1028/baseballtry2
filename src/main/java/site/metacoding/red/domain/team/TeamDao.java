@@ -7,5 +7,5 @@ public interface TeamDao {
 	public Team findById(Integer id);
 	public void insert(Team team);
 	public void update(Integer id , Team team);
-	public void deleteById();
+	public void deleteById(Integer id);
 }

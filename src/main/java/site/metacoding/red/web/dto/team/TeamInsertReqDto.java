@@ -2,7 +2,6 @@ package site.metacoding.red.web.dto.team;
 
 import lombok.Getter;
 import lombok.Setter;
-import site.metacoding.red.domain.stadium.Stadium;
 import site.metacoding.red.domain.team.Team;
 
 @Setter

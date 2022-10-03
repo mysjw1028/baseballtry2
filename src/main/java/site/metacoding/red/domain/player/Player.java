@@ -10,9 +10,11 @@ import lombok.Setter;
 public class Player {
 	private Integer id;
 	private String name;
-	private Integer position;
+	private String position;
 	private Integer teamId;
 	private boolean isOuter;
 	private Timestamp createdAt;
-
+	//엔티티가 아닌 필드 (Transient) 조인에서 만들어낸 데이터->일시적인 데이터
+	private Integer no;
+	private String teamName;
 }

@@ -23,6 +23,7 @@
 	</insert>
 
 	<insert id="deleteById">
+		DELETE FROM stadium WHERE id =#{id}
 	</insert>
 
 

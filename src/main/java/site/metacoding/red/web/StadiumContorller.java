@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,7 +22,13 @@ import site.metacoding.red.web.dto.stadium.StadiumInsertReqDto;
 public class StadiumContorller {
 	private final StadiumService stadiumService;
 
-	@GetMapping({"/","/stadium"})
+	@DeleteMapping("/stadium/{id}")
+	public @ResponseBody CMResponse<?> delete(@PathVariable Integer id) {
+		stadiumService.경기장삭제(id);
+		return new CMResponse<>(1,"경기장삭제", null);
+	}
+
+	@GetMapping({ "/", "/stadium" })
 	public String list(Model model) {
 		List<Stadium> stadiumList = stadiumService.목록보기();
 		model.addAttribute("stadiumList", stadiumList);

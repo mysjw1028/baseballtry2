@@ -7,5 +7,5 @@ public interface StadiumDao {
 	public Stadium findById(Integer id);
 	public void insert(Stadium stadium);
 	public void update(Integer id , Stadium stadium);
-	public void deleteById();
+	public void deleteById(Integer id);
 }

@@ -9,7 +9,7 @@ import site.metacoding.red.domain.stadium.Stadium;
 public class StadiumInsertReqDto {
 private String name;
 
-public Stadium toEntitly() {
+public Stadium toEntity() {
 	Stadium stadium = new Stadium();
 	stadium.setName(this.name);
 	return stadium;

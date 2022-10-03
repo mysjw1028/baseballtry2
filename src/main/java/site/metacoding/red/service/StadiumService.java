@@ -23,6 +23,6 @@ public class StadiumService {
 
 	// Controller는 DTo로 받고, DAO는 entity로 넘기자 (Insert, update)
 	public void 경기장등록(StadiumInsertReqDto stadiumInsertReqDto) {
-		stadiumDao.insert(stadiumInsertReqDto.toEntitly());
+		stadiumDao.insert(stadiumInsertReqDto.toEntity());
 	}
 }

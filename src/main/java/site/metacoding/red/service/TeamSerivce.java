@@ -20,6 +20,6 @@ public class TeamSerivce {
 		return teamDao.findAll();
 	}
 	public void 팀등록(TeamInsertReqDto teamInsertReqDto) {
-		teamDao.insert(teamInsertReqDto.toEntitly());
+		teamDao.insert(teamInsertReqDto.toEntity());
 	}
 }

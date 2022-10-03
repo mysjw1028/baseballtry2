@@ -7,17 +7,20 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>번호</th>
-				<th>칼럼1</th>
-				<th>칼럼2</th>
+				<c:forEach var="col" items="${playerPositionRespDto.colList}">
+					<th>${col}</th>
+				</c:forEach>
 			</tr>
 		</thead>
 		<tbody>
-				<tr>
-					<td>1</td>
-					<td>내용1</td>
-					<td>내용2</td>
-				</tr>
+			<tr>
+				<c:forEach var="row" items="${playerPositionRespDto.rowList}">
+					<tr>
+						<c:forEach var="value" items="${row}">
+							<td>${value}</td>
+						</c:forEach>
+					</tr>
+				</c:forEach>
 		</tbody>
 	</table>
 </div>

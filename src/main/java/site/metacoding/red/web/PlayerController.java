@@ -18,6 +18,7 @@ import site.metacoding.red.service.PlayerSerivce;
 import site.metacoding.red.service.TeamSerivce;
 import site.metacoding.red.web.dto.CMResponse;
 import site.metacoding.red.web.dto.player.PlayerInsertReqDto;
+import site.metacoding.red.web.dto.player.PlayerPositionRespDto;
 
 @RequiredArgsConstructor
 @Controller
@@ -25,6 +26,17 @@ public class PlayerController {
 	private final PlayerSerivce playerSerivce;
 	private final TeamSerivce teamSerivce;
 	
+	@GetMapping("/test/player/position")
+	public @ResponseBody PlayerPositionRespDto positionTest() {
+		return playerSerivce.포지션별팀찾기();
+	}
+	
+	@GetMapping("/player/position")
+		public String position(Model model) {		
+			PlayerPositionRespDto playerPositionRespDto =  playerSerivce.포지션별팀찾기();
+			model.addAttribute("playerPositionRespDto", playerPositionRespDto);
+			return "player/positionList";
+		}
 	@DeleteMapping("/player/{id}")
 	public @ResponseBody CMResponse<?> delete(@PathVariable Integer id) {
 		playerSerivce.선수삭제(id);

@@ -16,5 +16,6 @@ public class Team {
 	//엔티티가아닌 필드
 	private Integer no;
 	private String stadiumName;
+	private String enName;
 
 }

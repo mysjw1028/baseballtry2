@@ -14,7 +14,7 @@
 <body>
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/boards">Blog</a>
+			<a class="navbar-brand" href="/boards">baseball</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 				data-bs-target="#collapsibleNavbar">
 				<span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
 					<li class="nav-item"><a class="nav-link" href="/stadium">야구장목록보기</a></li>
 					<li class="nav-item"><a class="nav-link" href="/team">팀목록보기</a></li>
 					<li class="nav-item"><a class="nav-link" href="/player">선수목록보기</a></li>
-					<li class="nav-item"><a class="nav-link" href="">포지션별 야구선수페이지</a></li>
+					<li class="nav-item"><a class="nav-link" href="/player/position">포지션별 야구선수페이지</a></li>
 					<li class="nav-item"><a class="nav-link" href="">퇴출선수등록페이지</a></li>
 					<li class="nav-item"><a class="nav-link" href="">퇴출선수목록페이지</a></li>
 				</ul>

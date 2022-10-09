@@ -10,5 +10,7 @@ import lombok.Setter;
 public class Stadium {
 	private Integer id;
 	private String name;
-	private Timestamp creadtedAt;
+	private Timestamp createdAt;
+	//db에 없는 값 가짜코드
+	private Integer no;
 }

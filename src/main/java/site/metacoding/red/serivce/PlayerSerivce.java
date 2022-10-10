@@ -9,6 +9,8 @@ import site.metacoding.red.domain.player.Player;
 import site.metacoding.red.domain.player.PlayerDao;
 import site.metacoding.red.domain.team.Team;
 import site.metacoding.red.domain.team.TeamDao;
+import site.metacoding.red.web.dto.player.PlayerInsertReqDto;
+import site.metacoding.red.web.dto.stadium.StadiumInsertReqDto;
 import site.metacoding.red.web.dto.team.TeamInsertReqDto;
 
 @RequiredArgsConstructor
@@ -19,5 +21,8 @@ public class PlayerSerivce {
 
 	public List<Player> 목록보기() {
 		return playerDao.findAll();
+	}
+	public void  선수등록(PlayerInsertReqDto playerInsertReqDto) {
+		playerDao.insert(playerInsertReqDto.toEntity());
 	}
 }

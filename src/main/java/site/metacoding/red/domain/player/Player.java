@@ -13,5 +13,9 @@ public class Player {
 	private String position;
 	private Integer teamId;
 	private boolean isOuter;
-	private Timestamp creadtedAt;
+	private Timestamp createdAt;
+	
+	//트랜직트 -> 일시적인 데이터
+	private Integer no;
+	private String teamName;
 }

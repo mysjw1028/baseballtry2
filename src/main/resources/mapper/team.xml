@@ -5,11 +5,14 @@
 <mapper namespace="site.metacoding.red.domain.team.TeamDao">
 
 	<insert id="insert">
+		INSERT INTO team(NAME, stadium_id, created_at)
+		VALUES(#{name}, #{stadiumId}, NOW());
 	</insert>
 
 	<select id="findAll"
 		resultType="site.metacoding.red.domain.team.Team">
-		SELECT t.id, s.name stadium_name, row_number() over(order BY t.id asc) as
+		SELECT t.id, s.name stadium_name, row_number() over(order
+		BY t.id asc) as
 		NO, t.NAME, t.created_at
 		FROM team t
 		INNER JOIN stadium s

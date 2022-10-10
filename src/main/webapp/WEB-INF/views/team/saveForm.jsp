@@ -5,14 +5,46 @@
 <div class="container">
 	<form>
 		<div class="mb-3 mt-3">
-			<input type="text" class="form-control" placeholder="Enter value">
+			<select id="stadiumId" class="form-control">
+				<c:forEach var="stadium" items="${stadiumList}">
+					<option value="${stadium.id}">${stadium.name}</option>
+				</c:forEach>
+			</select>
 		</div>
 		<div class="mb-3 mt-3">
-			<input type="text" class="form-control" placeholder="Enter value">
+			<input id="name" type="text" class="form-control" placeholder="Enter teamname">
 		</div>
-		<button type="button" class="btn btn-primary">save완료</button>
+		<button id="btnInsert" type="button" class="btn btn-primary">팀 등록 완료</button>
 	</form>
 </div>
+
+<script>
+		$("#btnInsert").click(()=>{
+			insert();
+		});
+	
+		function insert(){
+			let data = {
+				name: $("#name").val(),
+				stadiumId:$("#stadiumId").val()
+			}
+
+			$.ajax("/team",{
+				type: "POST",
+				dataType: "json", // 응답 데이터
+				data: JSON.stringify(data), // http body에 들고갈 요청 데이터
+				headers: { // http header에 들고갈 요청 데이터
+					"Content-Type": "application/json; charset=UTF-8"
+				}//charset=UTF-8무조건 넣기
+			}).done((res)=>{
+				if(res.code == 1){//성공
+					location.href="/team";
+				}else{//실패
+					alert("팀 등록에 실패 하였습니다.")
+				}
+			});
+		}
+	</script>
 
 <%@ include file="../layout/footer.jsp"%>
 
